@@ -1,9 +1,11 @@
 import 'package:reading_app/data/data.dart';
 import 'package:reading_app/models/book_model.dart';
 import 'package:reading_app/models/single_book_model.dart';
+import 'package:reading_app/models/your_book_model.dart';
 import 'package:reading_app/resource/colors.dart';
 import 'package:reading_app/views/booktile.dart';
 import 'package:flutter/material.dart';
+import 'package:reading_app/views/category_view/your_books_category.dart';
 
 class AllBooks extends StatefulWidget {
   const AllBooks({Key? key}) : super(key: key);
@@ -15,6 +17,7 @@ class AllBooks extends StatefulWidget {
 class _AllBooksState extends State<AllBooks> {
   List<BookModel> books = [];
   List<SingleBookModel> singleeBooks = [];
+  List<YourBookModel> yourBooks = [];
 
   @override
   void initState() {
@@ -24,6 +27,7 @@ class _AllBooksState extends State<AllBooks> {
 
     books = getBooks();
     singleeBooks = getSingleBooks();
+    yourBooks = getYourBooks();
   }
 
   @override
@@ -51,6 +55,29 @@ class _AllBooksState extends State<AllBooks> {
           ),
           SizedBox(
             height: 16,
+          ),
+          Text(
+            "Student's Collection",
+            style: TextStyle(
+                color: kTextColor, fontSize: 18, fontWeight: FontWeight.w500),
+          ),
+          SizedBox(
+            height: 12,
+          ),
+          Container(
+            height: 250,
+            child: ListView.builder(
+                itemCount: yourBooks.length,
+                scrollDirection: Axis.horizontal,
+                shrinkWrap: true,
+                physics: ClampingScrollPhysics(),
+                itemBuilder: (context, index) {
+                  return SingleBookTile(
+                    title: yourBooks[index].title,
+                    categorie: yourBooks[index].categorie,
+                    imgAssetPath: yourBooks[index].imgAssetPath,
+                  );
+                }),
           ),
           Text(
             "You may also like",

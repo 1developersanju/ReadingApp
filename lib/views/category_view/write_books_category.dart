@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:reading_app/views/category_view/all_books_category.dart';
+import 'package:reading_app/views/write_article_view.dart';
 
 class WriteBooks extends StatelessWidget {
   const WriteBooks({Key? key}) : super(key: key);
@@ -14,6 +16,10 @@ class WriteBooks extends StatelessWidget {
             GestureDetector(
                 onTap: () {
                   print("add items");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PublicationView()),
+                  );
                 },
                 child: Icon(
                   Icons.add_circle_outline_rounded,
@@ -22,7 +28,7 @@ class WriteBooks extends StatelessWidget {
             SizedBox(
               height: 12,
             ),
-            Text("Write Your Own Books"),
+            Text("Write and publish your Publications"),
           ],
         ),
       ),

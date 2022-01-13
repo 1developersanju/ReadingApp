@@ -12,33 +12,21 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int index = 0;
 
-  // List<BookModel> books = [];
-  // List<SingleBookModel> singleeBooks = [];
-
   @override
-  // void initState() {
-  //   //   // ignore: todo
-  //   super.initState();
-
-  //   books = getBooks();
-  //   singleeBooks = getSingleBooks();
-  // }
-
-  // @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
         backgroundColor: lightbackground,
         body: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16),
+          padding: EdgeInsets.symmetric(horizontal: 10),
           child: Container(
             width: MediaQuery.of(context).size.width,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 SizedBox(
-                  height: 70,
+                  height: size.height * 0.02,
                 ),
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 12),
@@ -92,7 +80,8 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
-
+///
+///
   Widget stackedContainers() {
     return Expanded(
       child: IndexedStack(
@@ -105,7 +94,8 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
-
+///
+///
   Widget navigationButtons() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -140,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             GestureDetector(
               child: Text(
-                'Your Books',
+                'Your Publications',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
@@ -166,7 +156,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             GestureDetector(
               child: Text(
-                'Write Books',
+                'Publications',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
