@@ -3,6 +3,13 @@ import 'package:reading_app/resource/widgets.dart';
 import 'package:flutter/material.dart';
 
 class BookDetails extends StatelessWidget {
+  final String imgAssetPath, title, description, categorie;
+  BookDetails(
+      {required this.description,
+      required this.title,
+      required this.categorie,
+      required this.imgAssetPath});
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -10,10 +17,13 @@ class BookDetails extends StatelessWidget {
       body: Container(
         child: Stack(
           children: <Widget>[
-            Image.asset(
-              "assets/mermaid.png",
-              width: MediaQuery.of(context).size.width,
-              fit: BoxFit.fitWidth,
+            Container(
+              color: Colors.amber,
+              child: Image.asset(
+                imgAssetPath,
+                width: MediaQuery.of(context).size.width,
+                fit: BoxFit.fitWidth,
+              ),
             ),
 
             /////
@@ -42,7 +52,7 @@ class BookDetails extends StatelessWidget {
                         Row(
                           children: <Widget>[
                             Text(
-                              "The Little memaid",
+                              title,
                               style: TextStyle(
                                   color: Colors.black87,
                                   fontWeight: FontWeight.w700,
@@ -59,7 +69,7 @@ class BookDetails extends StatelessWidget {
                                   height: 6,
                                 ),
                                 Text(
-                                  "Fairy Tales",
+                                  categorie,
                                   style:
                                       TextStyle(color: darkGreen, fontSize: 14),
                                 )
@@ -71,7 +81,7 @@ class BookDetails extends StatelessWidget {
                           height: 30,
                         ),
                         Text(
-                          "“The Little Mermaid” is a fairy tale written by the Danish author Hans Christian Andersen. The story follows the journey of a young mermaid who is willing to give up her life in the sea as a mermaid to gain a human soul. The tale was first published in 1837 as part of a collection of fairy tales for children.",
+                          description,
                           style: TextStyle(
                             color: Colors.grey,
                             fontSize: 18,
@@ -91,35 +101,37 @@ class BookDetails extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     color: darkGreen,
                                     borderRadius: BorderRadius.circular(12)),
-                                child: Text(
-                                  "Read Book",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w600),
+                                child: GestureDetector(
+                                  child: Text(
+                                    "Read Book",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w600),
+                                  ),
                                 ),
                               ),
                             ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Expanded(
-                              child: Container(
-                                alignment: Alignment.center,
-                                padding: EdgeInsets.symmetric(vertical: 18),
-                                decoration: BoxDecoration(
-                                    border:
-                                        Border.all(color: greyColor, width: 2),
-                                    borderRadius: BorderRadius.circular(12)),
-                                child: Text(
-                                  "More info",
-                                  style: TextStyle(
-                                      color: greyColor,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                              ),
-                            )
+                            // SizedBox(
+                            //   width: 20,
+                            // ),
+                            // Expanded(
+                            //   child: Container(
+                            //     alignment: Alignment.center,
+                            //     padding: EdgeInsets.symmetric(vertical: 18),
+                            //     decoration: BoxDecoration(
+                            //         border:
+                            //             Border.all(color: greyColor, width: 2),
+                            //         borderRadius: BorderRadius.circular(12)),
+                            //     child: Text(
+                            //       "More info",
+                            //       style: TextStyle(
+                            //           color: greyColor,
+                            //           fontSize: 18,
+                            //           fontWeight: FontWeight.w600),
+                            //     ),
+                            //   ),
+                            // )
                           ],
                         )
                       ],

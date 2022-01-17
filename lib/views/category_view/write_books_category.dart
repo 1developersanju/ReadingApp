@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:reading_app/views/category_view/all_books_category.dart';
 import 'package:reading_app/views/write_article_view.dart';
 
 class WriteBooks extends StatelessWidget {

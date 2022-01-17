@@ -80,8 +80,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
-///
-///
+
+  ///
+  ///
   Widget stackedContainers() {
     return Expanded(
       child: IndexedStack(
@@ -94,8 +95,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
-///
-///
+
+  ///
+  ///
   Widget navigationButtons() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,

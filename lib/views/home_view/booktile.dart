@@ -2,7 +2,7 @@ import 'package:reading_app/resource/colors.dart';
 import 'package:reading_app/resource/widgets.dart';
 import 'package:flutter/material.dart';
 
-import 'book_details.dart';
+import '../detailview/book_details.dart';
 
 class BooksTile extends StatelessWidget {
   final String imgAssetPath, title, description, categorie;
@@ -20,8 +20,16 @@ class BooksTile extends StatelessWidget {
 
     return GestureDetector(
       onTap: () {
+        print("tapped ");
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => BookDetails()));
+            context,
+            MaterialPageRoute(
+                builder: (context) => BookDetails(
+                      categorie: categorie,
+                      description: description,
+                      imgAssetPath: imgAssetPath,
+                      title: title,
+                    )));
       },
       child: Container(
         height: 200,
@@ -69,7 +77,6 @@ class BooksTile extends StatelessWidget {
                               children: <Widget>[
                                 StarRating(
                                   rating: rating,
-                                  
                                 ),
                                 Spacer(),
                                 Text(
@@ -109,15 +116,26 @@ class BooksTile extends StatelessWidget {
 // single book tile
 
 class SingleBookTile extends StatelessWidget {
-  final String title, categorie, imgAssetPath;
-  SingleBookTile({required this.title, required this.categorie, required this.imgAssetPath});
+  final String title, categorie, imgAssetPath, description;
+  SingleBookTile(
+      {required this.title,
+      required this.categorie,
+      required this.description,
+      required this.imgAssetPath});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => BookDetails()));
+            context,
+            MaterialPageRoute(
+                builder: (context) => BookDetails(
+                      categorie: categorie,
+                      description: description,
+                      imgAssetPath: imgAssetPath,
+                      title: title,
+                    )));
       },
       child: Container(
         width: 110,

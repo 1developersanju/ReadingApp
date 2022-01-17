@@ -128,6 +128,10 @@ class _PublicationViewState extends State<PublicationView> {
                             onPressed: () async {
                               print("_article");
                               dialoguebutton();
+                              Timer(Duration(seconds: 1), () {
+                                // 5 seconds over, navigate to Page2.
+                                Navigator.pop(context);
+                              });
                             },
                             child: Text(
                               "Publish",
@@ -169,10 +173,6 @@ class _PublicationViewState extends State<PublicationView> {
               Timer(Duration(seconds: 1), () {
                 // 5 seconds over, navigate to Page2.
                 Navigator.pop(context);
-              });
-              Timer(Duration(seconds: 2), () {
-                // 5 seconds over, navigate to Page2.
-                SnackBar(content: Text("Published successfully"));
               });
             },
             text: 'Confirm',

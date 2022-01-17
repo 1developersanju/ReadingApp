@@ -3,9 +3,8 @@ import 'package:reading_app/models/book_model.dart';
 import 'package:reading_app/models/single_book_model.dart';
 import 'package:reading_app/models/your_book_model.dart';
 import 'package:reading_app/resource/colors.dart';
-import 'package:reading_app/views/booktile.dart';
+import 'package:reading_app/views/home_view/booktile.dart';
 import 'package:flutter/material.dart';
-import 'package:reading_app/views/category_view/your_books_category.dart';
 
 class AllBooks extends StatefulWidget {
   const AllBooks({Key? key}) : super(key: key);
@@ -22,6 +21,7 @@ class _AllBooksState extends State<AllBooks> {
   @override
   void initState() {
     //   // ignore: todo
+    // ignore: todo
     //   // TODO: implement initState
     super.initState();
 
@@ -66,18 +66,22 @@ class _AllBooksState extends State<AllBooks> {
           ),
           Container(
             height: 250,
-            child: ListView.builder(
-                itemCount: yourBooks.length,
-                scrollDirection: Axis.horizontal,
-                shrinkWrap: true,
-                physics: ClampingScrollPhysics(),
-                itemBuilder: (context, index) {
-                  return SingleBookTile(
-                    title: yourBooks[index].title,
-                    categorie: yourBooks[index].categorie,
-                    imgAssetPath: yourBooks[index].imgAssetPath,
-                  );
-                }),
+            child: GestureDetector(
+              // onTap: ,
+              child: ListView.builder(
+                  itemCount: yourBooks.length,
+                  scrollDirection: Axis.horizontal,
+                  shrinkWrap: true,
+                  physics: ClampingScrollPhysics(),
+                  itemBuilder: (context, index) {
+                    return SingleBookTile(
+                      title: yourBooks[index].title,
+                      categorie: yourBooks[index].categorie,
+                      imgAssetPath: yourBooks[index].imgAssetPath,
+                      description: yourBooks[index].description,
+                    );
+                  }),
+            ),
           ),
           Text(
             "You may also like",
@@ -99,6 +103,7 @@ class _AllBooksState extends State<AllBooks> {
                     title: singleeBooks[index].title,
                     categorie: singleeBooks[index].categorie,
                     imgAssetPath: singleeBooks[index].imgAssetPath,
+                    description: singleeBooks[index].description,
                   );
                 }),
           )

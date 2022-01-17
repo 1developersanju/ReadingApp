@@ -8,7 +8,7 @@ List<BookModel> getBooks() {
       categorie: '', description: '', imgAssetPath: '', rating: 5, title: '');
 
   //1
-  bookModel.imgAssetPath = "assets/mermaid.png";
+  bookModel.imgAssetPath = "assets/little_mermaid.jpg";
   bookModel.title = "The little mermaid";
   bookModel.description = '''“The Little Mermaid” is a
 fairy tale written by the Danish author Hans
@@ -32,7 +32,7 @@ Christian Andersen.''';
       categorie: '', description: '', imgAssetPath: '', rating: 5, title: '');
 
   //3
-  bookModel.imgAssetPath = "assets/blabla.png";
+  bookModel.imgAssetPath = "assets/willow_of_fate.jpg";
   bookModel.title = "Willows Of Fate";
   bookModel.description =
       '''Is there room in the hands of fate for free will?All her life, Desdemona has seen things others haven’t.''';
@@ -53,53 +53,63 @@ Christian Andersen.''';
 ///
 List<SingleBookModel> getSingleBooks() {
   List<SingleBookModel> books = [];
-  SingleBookModel singleBookModel =
-      SingleBookModel(categorie: '', imgAssetPath: '', title: '');
+  SingleBookModel singleBookModel = SingleBookModel(
+      categorie: '', imgAssetPath: '', title: '', description: '');
 
   //1
   singleBookModel.imgAssetPath = "assets/the_book_thief.jpeg";
   singleBookModel.title = "The Book Thief";
   singleBookModel.categorie = "young adult fiction";
+  singleBookModel.description =
+      '''Is there room in the hands of fate for free will?All her life, Desdemona has seen things others haven’t.''';
   books.add(singleBookModel);
 
-  singleBookModel =
-      new SingleBookModel(categorie: '', imgAssetPath: '', title: '');
+  singleBookModel = new SingleBookModel(
+      categorie: '', imgAssetPath: '', title: '', description: '');
 
   //2
   singleBookModel.imgAssetPath = "assets/rich_dad_poor_dad.jpg";
   singleBookModel.title = "Rich dad poor dad";
   singleBookModel.categorie = "Non-fiction";
+  singleBookModel.description =
+      '''Is there room in the hands of fate for free will?All her life, Desdemona has seen things others haven’t.''';
   books.add(singleBookModel);
 
-  singleBookModel =
-      new SingleBookModel(categorie: '', imgAssetPath: '', title: '');
+  singleBookModel = new SingleBookModel(
+      categorie: '', imgAssetPath: '', title: '', description: '');
 
   //3
   singleBookModel.imgAssetPath = "assets/Harry Potter.jpeg";
   singleBookModel.title = "Harry Potter";
   singleBookModel.categorie = "Fantasy Fiction";
+  singleBookModel.description =
+      '''Is there room in the hands of fate for free will?All her life, Desdemona has seen things others haven’t.''';
   books.add(singleBookModel);
 
-  singleBookModel =
-      new SingleBookModel(categorie: '', imgAssetPath: '', title: '');
+  singleBookModel = new SingleBookModel(
+      categorie: '', imgAssetPath: '', title: '', description: '');
 
   //4
   singleBookModel.imgAssetPath = "assets/night_circus.jpg";
   singleBookModel.title = "Night Circus";
   singleBookModel.categorie = "Romance novel";
+  singleBookModel.description =
+      '''Is there room in the hands of fate for free will?All her life, Desdemona has seen things others haven’t.''';
   books.add(singleBookModel);
 
-  singleBookModel =
-      new SingleBookModel(categorie: '', imgAssetPath: '', title: '');
+  singleBookModel = new SingleBookModel(
+      categorie: '', imgAssetPath: '', title: '', description: '');
 
   //1
   singleBookModel.imgAssetPath = "assets/tales_from_the_road.jpg";
   singleBookModel.title = "Tales from the road";
   singleBookModel.categorie = "Budget Travel";
+  singleBookModel.description =
+      '''Is there room in the hands of fate for free will?All her life, Desdemona has seen things others haven’t.''';
   books.add(singleBookModel);
 
-  singleBookModel =
-      new SingleBookModel(categorie: '', imgAssetPath: '', title: '');
+  singleBookModel = new SingleBookModel(
+      categorie: '', imgAssetPath: '', title: '', description: '');
 
   return books;
 }
