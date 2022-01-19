@@ -80,17 +80,20 @@ class BookDetails extends StatelessWidget {
                         SizedBox(
                           height: 30,
                         ),
-                        Text(
-                          description,
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 18,
-                            letterSpacing: 0.6,
-                            wordSpacing: 0.6,
+                        SizedBox(
+                          height: size.height * 0.2,
+                          child: Text(
+                            description,
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 18,
+                              letterSpacing: 0.6,
+                              wordSpacing: 0.6,
+                            ),
                           ),
                         ),
                         SizedBox(
-                          height: 80,
+                          height: size.height * 0.01,
                         ),
                         Row(
                           children: <Widget>[
@@ -109,6 +112,15 @@ class BookDetails extends StatelessWidget {
                                         fontSize: 18,
                                         fontWeight: FontWeight.w600),
                                   ),
+                                  onTap: () {
+                                    print("tapped read book");
+                                    // Navigator.push(
+                                    //     context,
+                                    //     MaterialPageRoute(
+                                    //         builder: (context) => Pdf_View(
+                                                 
+                                    //             )));
+                                  },
                                 ),
                               ),
                             ),

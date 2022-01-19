@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "286711405478",
+    "project_id": "writicles-dabee",
+    "storage_bucket": "writicles-dabee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286711405478:android:63f1b334be2c152d87cd67",
+        "android_client_info": {
+          "package_name": "com.example.reading_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "286711405478-ukaiabgiivbkracvp21duf648aqrlr97.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbio3LHhrLujXi9rt209mIJ6YWBCmGs9g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "286711405478-ukaiabgiivbkracvp21duf648aqrlr97.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

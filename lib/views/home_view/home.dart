@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:reading_app/resource/colors.dart';
 import 'package:reading_app/views/category_view/all_books_category.dart';
 import 'package:reading_app/views/category_view/write_books_category.dart';
@@ -14,6 +15,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final user = FirebaseAuth.instance.currentUser!;
     final size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
@@ -33,11 +35,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Row(
                     children: <Widget>[
                       Text(
-                        "Hi Sanjeev,",
+                        "Hi  ${user.displayName},",
                         style: TextStyle(
                             color: kTextColor,
                             fontWeight: FontWeight.w500,
-                            fontSize: 24),
+                            fontSize: 20),
                       ),
                       Spacer(),
                       IconButton(onPressed: () {}, icon: Icon(Icons.search)),
@@ -45,8 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       //   "assets/search.png",
                       // ),
                       CircleAvatar(
-                        radius: 20,
-                        child: Icon(Icons.person),
+                        radius: 28,
+                        backgroundImage: NetworkImage(user.photoURL!),
                       ),
 
                       // IconButton(
@@ -102,31 +104,33 @@ class _MyHomePageState extends State<MyHomePage> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        Column(
-          children: [
-            GestureDetector(
-              child: Text(
-                'All Books',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                  color: index == 0 ? kTextColor : kTextLightColor,
+        SingleChildScrollView(
+          child: Column(
+            children: [
+              GestureDetector(
+                child: Text(
+                  'All Books',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: MediaQuery.of(context).size.height * 0.02,
+                    color: index == 0 ? kTextColor : kTextLightColor,
+                  ),
                 ),
+                onTap: () {
+                  setState(() {
+                    index = 0;
+                  });
+                },
               ),
-              onTap: () {
-                setState(() {
-                  index = 0;
-                });
-              },
-            ),
-            Container(
-              margin:
-                  EdgeInsets.only(top: kDefaultPaddin * 0.02), //top padding 5
-              height: 2.8,
-              width: 30,
-              color: index == 0 ? darkGreen : Colors.transparent,
-            )
-          ],
+              Container(
+                margin:
+                    EdgeInsets.only(top: kDefaultPaddin * 0.02), //top padding 5
+                height: 2.8,
+                width: 30,
+                color: index == 0 ? darkGreen : Colors.transparent,
+              )
+            ],
+          ),
         ),
         Column(
           children: [

@@ -69,8 +69,10 @@ class BooksTile extends StatelessWidget {
                             ),
                             Text(
                               description,
-                              style:
-                                  TextStyle(color: Colors.grey, fontSize: 12),
+                              style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: size.height * 0.014,
+                              ),
                             ),
                             Spacer(),
                             Row(
