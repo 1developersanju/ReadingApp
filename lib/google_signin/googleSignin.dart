@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:auth_buttons/auth_buttons.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:provider/provider.dart';
-import 'package:reading_app/provider/gLogin.dart';
+import 'package:reading_app/services/gLogin.dart';
 import 'package:reading_app/resource/colors.dart';
 
 //import 'package:task_bites/login/otp_field.dart';

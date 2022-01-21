@@ -1,4 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:provider/provider.dart';
+import 'package:reading_app/services/gLogin.dart';
 import 'package:reading_app/resource/colors.dart';
 import 'package:reading_app/views/category_view/all_books_category.dart';
 import 'package:reading_app/views/category_view/write_books_category.dart';
@@ -46,9 +48,26 @@ class _MyHomePageState extends State<MyHomePage> {
                       // Image.asset(
                       //   "assets/search.png",
                       // ),
-                      CircleAvatar(
-                        radius: 28,
-                        backgroundImage: NetworkImage(user.photoURL!),
+                      GestureDetector(
+                        onTap: () {
+                          final snackBar = SnackBar(
+                            content: const Text('Do you want to LOGOUT'),
+                            action: SnackBarAction(
+                              label: 'Yes',
+                              onPressed: () {
+                                final provider =
+                                    Provider.of<GoogleLoginProvider>(context,
+                                        listen: false);
+                                provider.logout();
+                              },
+                            ),
+                          );
+                          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                        },
+                        child: CircleAvatar(
+                          radius: 28,
+                          backgroundImage: NetworkImage(user.photoURL!),
+                        ),
                       ),
 
                       // IconButton(

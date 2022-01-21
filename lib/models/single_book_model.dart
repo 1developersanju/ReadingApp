@@ -8,5 +8,6 @@ class SingleBookModel {
       {required this.imgAssetPath,
       required this.title,
       required this.categorie,
-      required this.description});
+      required this.description
+      });
 }

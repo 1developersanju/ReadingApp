@@ -1,10 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:material_dialogs/widgets/buttons/icon_button.dart';
-import 'package:material_dialogs/widgets/buttons/icon_outline_button.dart';
 import 'package:reading_app/resource/colors.dart';
-import 'package:material_dialogs/material_dialogs.dart';
 
 class PublicationView extends StatefulWidget {
   const PublicationView({Key? key}) : super(key: key);
@@ -127,7 +124,7 @@ class _PublicationViewState extends State<PublicationView> {
                           child: TextButton(
                             onPressed: () async {
                               print("_article");
-                              dialoguebutton();
+                             // dialoguebutton();
                               Timer(Duration(seconds: 1), () {
                                 // 5 seconds over, navigate to Page2.
                                 Navigator.pop(context);
@@ -152,35 +149,35 @@ class _PublicationViewState extends State<PublicationView> {
     );
   }
 
-  void dialoguebutton() {
-    Dialogs.materialDialog(
-        msg: 'Confirm to Publish',
-        title: "Delete",
-        color: Colors.white,
-        context: context,
-        actions: [
-          IconsOutlineButton(
-            onPressed: () {
-              Navigator.of(context, rootNavigator: true).pop();
-            },
-            text: 'Cancel',
-            iconData: Icons.cancel_outlined,
-            textStyle: TextStyle(color: Colors.grey),
-            iconColor: Colors.grey,
-          ),
-          IconsButton(
-            onPressed: () async {
-              Timer(Duration(seconds: 1), () {
-                // 5 seconds over, navigate to Page2.
-                Navigator.pop(context);
-              });
-            },
-            text: 'Confirm',
-            iconData: Icons.done,
-            color: Colors.red,
-            textStyle: TextStyle(color: Colors.white),
-            iconColor: Colors.white,
-          ),
-        ]);
-  }
+  // void dialoguebutton() {
+  //   Dialogs.materialDialog(
+  //       msg: 'Confirm to Publish',
+  //       title: "Delete",
+  //       color: Colors.white,
+  //       context: context,
+  //       actions: [
+  //         IconsOutlineButton(
+  //           onPressed: () {
+  //             Navigator.of(context, rootNavigator: true).pop();
+  //           },
+  //           text: 'Cancel',
+  //           iconData: Icons.cancel_outlined,
+  //           textStyle: TextStyle(color: Colors.grey),
+  //           iconColor: Colors.grey,
+  //         ),
+  //         IconsButton(
+  //           onPressed: () async {
+  //             Timer(Duration(seconds: 1), () {
+  //               // 5 seconds over, navigate to Page2.
+  //               Navigator.pop(context);
+  //             });
+  //           },
+  //           text: 'Confirm',
+  //           iconData: Icons.done,
+  //           color: Colors.red,
+  //           textStyle: TextStyle(color: Colors.white),
+  //           iconColor: Colors.white,
+  //         ),
+  //       ]);
+  // }
 }
