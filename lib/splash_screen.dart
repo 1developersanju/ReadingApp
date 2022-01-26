@@ -18,7 +18,7 @@ class Splash extends StatelessWidget {
           splash: const Text(
             "Writicles",
             style: TextStyle(
-                fontWeight: FontWeight.bold, fontSize: 30, color: darkGreen),
+                fontWeight: FontWeight.bold, fontSize: 30, color: ThemeClr),
           ),
           nextScreen: DecideLogin(),
           splashTransition: SplashTransition.fadeTransition,

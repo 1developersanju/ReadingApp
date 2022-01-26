@@ -35,17 +35,26 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   material_dialogs: ^1.1.1
+  #flutter_cached_pdfview: ^0.4.1
   auth_buttons: ^1.0.1+4 
   #splash
   animated_splash_screen: ^1.1.0
+  #pdf viewer
+  syncfusion_flutter_pdfviewer: ^19.4.47-beta
   # Google SignIn 
   google_sign_in: ^5.1.1
+
   firebase_auth: ^3.1.1
   # State Management
   provider: ^6.0.0
+  path_provider: ^2.0.8
+  dio: ^4.0.4
   shared_preferences: ^2.0.8
   #firestore
   cloud_firestore: ^3.1.6
+  #firebase
+  firebase_database: ^9.0.5
+  firebase_database_web: ^0.2.0+4
 
 dev_dependencies:
   flutter_test:

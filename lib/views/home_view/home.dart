@@ -79,14 +79,77 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 16,
                 ),
                 Card(
-                  child: Container(
-                    height: size.height * 0.20,
-                    child: Image.asset(
-                      "assets/banner.png",
-                      fit: BoxFit.fitWidth,
+                  elevation: 12,
+                  //shadowColor: darkbackground,
+                  
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.all(Radius.circular(4)),
+                    child: Container(
+                      height: size.height * 0.20,
+                      child: Padding(
+                        padding: EdgeInsets.all(5),
+                        child: Center(
+                          child: Column(
+                            children: <Widget>[
+                              Text(
+                                "Writicles",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                  color: Color(0xffFFCE00),
+                                ),
+                              ),
+                              Text(
+                                "ScoreBoard",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 12,
+                              ),
+                              Center(
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      "Name",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                        color: Color(0xffFFCE00),
+                                      ),
+                                    ),
+                                    Spacer(),
+                                    Text(
+                                      "No.of books read",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              )
+                              // ClipRRect(
+                              //   borderRadius:
+                              //       BorderRadius.all(Radius.circular(80)),
+                              //   child: Image.asset(
+                              //     "assets/reading.png",
+                              //     height: size.height * 0.2,
+                              //   ),
+                              // ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      decoration: BoxDecoration(gradient: linearGradColor),
                     ),
                   ),
                 ),
+
                 SizedBox(
                   height: 30,
                 ),
@@ -146,7 +209,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     EdgeInsets.only(top: kDefaultPaddin * 0.02), //top padding 5
                 height: 2.8,
                 width: 30,
-                color: index == 0 ? darkGreen : Colors.transparent,
+                color: index == 0 ? ThemeClr : Colors.transparent,
               )
             ],
           ),
@@ -173,7 +236,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   EdgeInsets.only(top: kDefaultPaddin * 0.02), //top padding 5
               height: 2.8,
               width: 30,
-              color: index == 1 ? darkGreen : Colors.transparent,
+              color: index == 1 ? ThemeClr : Colors.transparent,
             )
           ],
         ),
@@ -199,7 +262,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   EdgeInsets.only(top: kDefaultPaddin * 0.02), //top padding 5
               height: 2.8,
               width: 30,
-              color: index == 2 ? darkGreen : Colors.transparent,
+              color: index == 2 ? ThemeClr : Colors.transparent,
             )
           ],
         ),

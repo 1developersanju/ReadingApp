@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reading_app/resource/colors.dart';
 import 'package:reading_app/views/write_article_view.dart';
 
 class WriteBooks extends StatelessWidget {
@@ -21,7 +22,8 @@ class WriteBooks extends StatelessWidget {
                   );
                 },
                 child: Icon(
-                  Icons.add_circle_outline_rounded,
+                  Icons.add_circle_outline,
+                  color: ThemeClr,
                   size: size.height * 0.09,
                 )),
             SizedBox(

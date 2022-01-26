@@ -1,6 +1,7 @@
 import 'package:reading_app/resource/colors.dart';
 import 'package:reading_app/resource/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:reading_app/views/pdf_viewer.dart';
 
 class BookDetails extends StatelessWidget {
   final String imgAssetPath, title, description, categorie;
@@ -71,7 +72,7 @@ class BookDetails extends StatelessWidget {
                                 Text(
                                   categorie,
                                   style:
-                                      TextStyle(color: darkGreen, fontSize: 14),
+                                      TextStyle(color: ThemeClr, fontSize: 14),
                                 )
                               ],
                             )
@@ -102,7 +103,7 @@ class BookDetails extends StatelessWidget {
                                 alignment: Alignment.center,
                                 padding: EdgeInsets.symmetric(vertical: 18),
                                 decoration: BoxDecoration(
-                                    color: darkGreen,
+                                    gradient: linearGradColor,
                                     borderRadius: BorderRadius.circular(12)),
                                 child: GestureDetector(
                                   child: Text(
@@ -114,12 +115,12 @@ class BookDetails extends StatelessWidget {
                                   ),
                                   onTap: () {
                                     print("tapped read book");
-                                    // Navigator.push(
-                                    //     context,
-                                    //     MaterialPageRoute(
-                                    //         builder: (context) => Pdf_View(
-                                                 
-                                    //             )));
+
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                Pdf_Viewer()));
                                   },
                                 ),
                               ),

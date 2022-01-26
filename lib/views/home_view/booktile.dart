@@ -84,7 +84,7 @@ class BooksTile extends StatelessWidget {
                                 Text(
                                   categorie,
                                   style: TextStyle(
-                                      color: darkGreen,
+                                      color: ThemeClr,
                                       fontSize: size.width * 0.026),
                                 )
                               ],
@@ -169,7 +169,7 @@ class SingleBookTile extends StatelessWidget {
             Spacer(),
             Text(
               categorie,
-              style: TextStyle(color: darkGreen, fontSize: 13),
+              style: TextStyle(color: ThemeClr, fontSize: 13),
             ),
             Spacer()
           ],

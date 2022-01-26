@@ -20,7 +20,7 @@ class DecideLogin extends StatelessWidget {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const Center(
                   child: CircularProgressIndicator(
-                color: darkGreen,
+                color: ThemeClr,
               ));
             } else if (snapshot.hasData) {
               return MyHomePage();

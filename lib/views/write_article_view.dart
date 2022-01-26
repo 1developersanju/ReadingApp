@@ -34,7 +34,7 @@ class _PublicationViewState extends State<PublicationView> {
                   child: Icon(
                     Icons.arrow_back_ios,
                     size: 30,
-                    color: darkGreen,
+                    color: ThemeClr,
                   ),
                 ),
                 SizedBox(
@@ -119,7 +119,7 @@ class _PublicationViewState extends State<PublicationView> {
                           height: 60,
                           width: double.infinity,
                           decoration: BoxDecoration(
-                              color: darkGreen,
+                              color: ThemeClr,
                               borderRadius: BorderRadius.circular(30)),
                           child: TextButton(
                             onPressed: () async {

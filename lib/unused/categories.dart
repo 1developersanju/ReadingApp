@@ -58,7 +58,7 @@ class _CategoriesState extends State<Categories> {
                   EdgeInsets.only(top: kDefaultPaddin * 0.02), //top padding 5
               height: 2.8,
               width: 30,
-              color: selectedIndex == index ? darkGreen : Colors.transparent,
+              color: selectedIndex == index ? ThemeClr : Colors.transparent,
             )
           ],
         ),

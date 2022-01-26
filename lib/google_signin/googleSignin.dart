@@ -61,7 +61,7 @@ class _GoogleLoginState extends State<GoogleLogin> {
                 buttonColor: Colors.white,
                 splashColor: Colors.grey.shade100,
                 shadowColor: Colors.grey,
-                borderColor: darkGreen,
+                borderColor: ThemeClr,
                 borderRadius: 8.0,
                 borderWidth: 2.0,
                 elevation: 5.0,
